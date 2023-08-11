@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <script language="Javascript">
+        function determinant()
+        {
+        var a,b,c,d,e,f,g,h,i,j;
+        a=parseInt(f1.t1.value);
+        b=parseInt(f1.t2.value);
+        c=parseInt(f1.t3.value);
+        d=parseInt(f1.t4.value);
+        e=parseInt(f1.t5.value);
+        f=parseInt(f1.t6.value);
+        g=parseInt(f1.t7.value);
+        h=parseInt(f1.t8.value);
+        i=parseInt(f1.t9.value);
+        j=a*(e*i-f*h)-b*(d*i-f*g)+c*(d*h-g*e);
+        f1.t10.value=+j
+        }
+        function minor()
+        {
+            var a,b,c,d,e,f,g,h,i,j,m11,m12,m13,m21,m22,m23,m31,m32,m33;
+        a=parseInt(f1.t1.value);
+        b=parseInt(f1.t2.value);
+        c=parseInt(f1.t3.value);
+        d=parseInt(f1.t4.value);
+        e=parseInt(f1.t5.value);
+        f=parseInt(f1.t6.value);
+        g=parseInt(f1.t7.value);
+        h=parseInt(f1.t8.value);
+        i=parseInt(f1.t9.value);
+        m11=e*i-f*h;
+        f1.t11.value=+m11;
+        m12=d*i-f*g;
+        f1.t12.value=+m12;
+        m13=d*h-e*g;
+        f1.t13.value=+m13;
+        m21=b*i-c*h;
+        f1.t14.value=+m21;
+        m22=a*i-c*g;
+        f1.t15.value=+m22;
+        m23=a*h-g*b;
+        f1.t16.value=+m23;
+        m31=b*f-e*c;
+        f1.t17.value=+m31;
+        m32=a*f-c*d;
+        f1.t18.value=+m32;
+        m33=a*e-d*b;
+        f1.t19.value=+m33
+        }
+        function cofactor()
+         {
+            var a,b,c,d,e,f,g,h,i,j,m11,m12,m13,m21,m22,m23,m31,m32,m33;
+        a=parseInt(f1.t1.value);
+        b=parseInt(f1.t2.value);
+        c=parseInt(f1.t3.value);
+        d=parseInt(f1.t4.value);
+        e=parseInt(f1.t5.value);
+        f=parseInt(f1.t6.value);
+        g=parseInt(f1.t7.value);
+        h=parseInt(f1.t8.value);
+        i=parseInt(f1.t9.value);
+        m11=e*i-f*h;
+        f1.t11.value=+m11;
+        m12=d*i-f*g;
+        f1.t12.value=+m12;
+        m13=d*h-e*g;
+        f1.t13.value=+m13;
+        m21=b*i-c*h;
+        f1.t14.value=+m21;
+        m22=a*i-c*g;
+        f1.t15.value=+m22;
+        m23=a*h-g*b;
+        f1.t16.value=+m23;
+        m31=b*f-e*c;
+        f1.t17.value=+m31;
+        m32=a*f-c*d;
+        f1.t18.value=+m32;
+        m33=a*e-d*b;
+        f1.t19.value=+m33;
+        c11=1*m11;
+        f1.t11.value=+c11;
+        c12=m12*-1;
+        f1.t12.value=+c12;
+        c13=1*m13;
+        f1.t13.value=+c13;
+        c21=-1*m21;
+        f1.t14.value=+c21;
+        c22=1*m22;
+        f1.t15.value=+c22;
+        c23=-1*m23;
+        f1.t16.value=+c23;
+        c31=1*m31;
+        f1.t17.value=+c31;
+        c32=-1*m32;
+        f1.t18.value=+c32;
+        c33=1*m33;
+        f1.t19.value=+c33
+
+      
+        }
+        
+            
+        </script>
+    </head>
+    <body>
+    <form name="f1">
+    <h2><font color="purple">Determinant</font></h2>
+   [&nbsp; a11<input type="text" size="1" name="t1">&nbsp;&nbsp;
+    a12<input type="text" size="1" name="t2">&nbsp;&nbsp;
+    a13<input type="text" size="1"name="t3"><br><br>
+   &nbsp;&nbsp;&nbsp;a21<input type="text" size="1" name="t4">&nbsp;&nbsp;
+    a22<input type="text" size="1"  name="t5">&nbsp;&nbsp;
+    a23<input type="text" size="1" name="t6"><br><br>
+   &nbsp;&nbsp;&nbsp;a31<input type="text" size="1" name="t7">&nbsp;&nbsp;
+    a32<input type="text" size="1"name="t8">&nbsp;&nbsp;
+    a33<input type="text" size="1" name="t9">&nbsp;&nbsp;]
+    <h2><font color="purple">Result</font></h2><input type="text" name="t10"><br><br>
+    <input type="button" value="Result" onClick="determinant()"><br><br>
+    M11 and A11<input type="text" name="t11"><br><br>
+    <input type="button" value="Minor" onClick="minor()">
+    <input type="button" value="Cofactor" onClick="cofactor()"><br><br>
+    M12 and A12<input type="text" name="t12"><br><br>
+    <input type="button" value="Minor" onClick="minor()">
+    <input type="button" value="Cofactor" onClick="cofactor()"><br><br>
+    M13 and A13<input type="text" name="t13"><br><br>
+    <input type="button" value="Minor" onClick="minor()">
+    <input type="button" value="Cofactor" onClick="cofactor()"><br /><br>
+    M21 and A21<input type="text" name="t14"><br><br>
+    <input type="button" value="Minor" onClick="minor()">
+    <input type="button" value="Cofactor" onClick="cofactor()"><br><br>
+    M22 and A22<input type="text" name="t15"><br><br>
+    <input type="button" value="Minor" onClick="minor()">
+    <input type="button" value="Cofactor" onClick="cofactor()"><br><br>
+    M23 and A23<input type="text" name="t16"><br><br>
+    <input type="button" value="Minor" onClick="minor()">
+    <input type="button" value="Cofactor" onClick="cofactor()"><br><br>
+    M31 and A31<input type="text" name="t17"><br><br>
+    <input type="button" value="Minor" onClick="minor()">
+    <input type="button" value="Cofactor" onClick="cofactor()"><br><br>
+    M32 and A32<input type="text" name="t18"><br><br>
+    <input type="button" value="Minor" onClick="minor()">
+    <input type="button" value="Cofactor" onClick="cofactor()"><br><br>
+    M33 and A33<input type="text" name="t19"><br><br>
+    <input type="button" value="Minor" onClick="minor()">
+    <input type="button" value="Cofactor" onClick="cofactor()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+        <input type="reset" value="Clear">
+    </form>
+        
+    </body>
+</html>
